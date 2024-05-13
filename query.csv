@@ -1,0 +1,1 @@
+select customers.name, items.item_name, sum (orders.quantity), customers.age as sum_quantity from orders join customers on orders.order_id = customers.customer_id join items on orders.item_id = items.item_id where customers.age between 18 and 35 group by items.item_name;
